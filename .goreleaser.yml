@@ -1,0 +1,20 @@
+project_name: ssltest
+
+builds:
+  - main: main.go
+    binary: ssltest
+    goos:
+      - linux
+    goarch:
+      - amd64
+
+nfpms:
+  - license: MIT
+    maintainer: Vadim Tivikov <vadim.tivikov@insales.ru>
+    vendor: InSales Rus LLC
+    description: Check SSL certs
+    formats:
+      - deb
+
+
+
