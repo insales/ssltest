@@ -92,7 +92,7 @@ func main() {
         fmt.Printf("Warning - Problems: %s\n", warningDomains)
         os.Exit(Warning)
     } else if len(okDomains)>0 {
-        fmt.Printf("OK - Good: %s\n", okDomains)
+        fmt.Printf("OK - All domains SSL good\n")
         os.Exit(OK)
     }  
 }
