@@ -4,13 +4,13 @@
 
 Многопоточная, хотя и в 1 поток проверяет сертификаты довольно быстро
 
-Проверяет домены переданные как через аргумент строки, так и через stdin, на случай если доменов будет много
+Проверяет домены, переданные как через аргумент строки, так и через stdin, на случай если доменов будет много
 ```
 ssltest -d "api.insales.ru"
 OK - Good: [api.insales.ru]
 ```
 
-Резолвит ip и проверяет сертификат на каждом хосте, в оригинале откуда брал были какие-то хаки для ipv6 https://github.com/wycore/check-ssl
+Резолвит ip и проверяет сертификат на каждом хосте. В оригинале, откуда брал, были какие-то хаки для ipv6 https://github.com/wycore/check-ssl
 ```
 ssltest -d "ietf.com" -debug
 2021/03/01 14:56:52 Worker 4 start with domain ietf.com
@@ -51,7 +51,7 @@ echo "github.com" | ssltest
 OK - Good: [github.com]
 
 ```
-Waring если осталось меньше дней, чем задано параметром -w
+Warning, если осталось меньше дней, чем задано параметром -w
 ```
 echo "www.githubstatus.com" | ssltest -w 70
 Warning - Problems: [www.githubstatus.com]
